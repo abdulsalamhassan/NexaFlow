@@ -26,7 +26,7 @@ export default function Navbar() {
                 {/* --- Desktop Navigation (Hidden on Mobile) --- */}
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
                     <Link href="/features" className="hover:text-blue-600 transition-colors">Features</Link>
-                    <Link href="#pricing" className="hover:text-blue-600 transition-colors">Pricing</Link>
+                    <Link href="/pricing" className="hover:text-blue-600 transition-colors">Pricing</Link>
                     <Link href="/about" className="hover:text-blue-600 transition-colors">About</Link>
                     <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
                 </nav>
