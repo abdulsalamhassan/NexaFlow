@@ -44,7 +44,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="pt-8 border-t border-slate-100 text-center text-sm text-slate-400">
-                    © {new Date().getFullYear()} NexaFlow Inc. All rights reserved.
+                    © {new Date().getFullYear()} NexaFlow Inc. All rights reserved. developed by <a className="text-md text-blue-600 font-bold" href="https://abdulsalam-ten.vercel.app/">Abdulsalam</a>
                 </div>
             </div>
         </footer>

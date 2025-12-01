@@ -68,7 +68,7 @@ export default function Navbar() {
                             Features
                         </Link>
                         <Link
-                            href="#pricing"
+                            href="/pricing"
                             className="hover:text-blue-600 transition-colors"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
