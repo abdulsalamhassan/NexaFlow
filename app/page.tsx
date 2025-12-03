@@ -8,9 +8,8 @@ export default function Home() {
     <>
       <Hero />
       <Features />
-      {/* <Pricing /> */}
       <Testimonials />
-      {/* You can add a Testimonial section or FAQ section here */}
+     
     </>
   );
 }

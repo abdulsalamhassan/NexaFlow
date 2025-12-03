@@ -20,7 +20,7 @@ import React from "react";
 
 export default function Features() {
     return (
-        <section id="features" className="py-24 bg-slate-50 relative overflow-hidden">
+        <section id="features" className="py-24 bg-gradient-to-b from-blue-100 to-white relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
 
                 {/* --- Section Header --- */}

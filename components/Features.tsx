@@ -35,7 +35,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-white">
+    <section id="features" className="py-24 bg-gradient-to-b from-blue-100 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Powerful Features</h2>
@@ -46,7 +46,7 @@ export default function Features() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="p-6 rounded-2xl border border-slate-100 bg-blue-200 hover:bg-white hover:shadow-xl hover:shadow-blue-500/5 hover:border-blue-100 transition-all duration-300">
+            <div key={index} className="p-6 rounded-2xl border border-slate-100 bg-white hover:bg-blue-100 hover:shadow-xl hover:shadow-blue-500/5 hover:border-blue-100 transition-all duration-300">
               <div className="w-12 h-12 bg-sky-400 rounded-lg border border-slate-200 flex items-center justify-center mb-4 shadow-sm">
                 {feature.icon}
               </div>

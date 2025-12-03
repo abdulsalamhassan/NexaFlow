@@ -3,8 +3,8 @@ import { Check } from "lucide-react";
 
 export default function Pricing() {
     return (
-        <section className="py-28 bg-gradient-to-b from-white to-slate-100">
-            <div className="container mx-auto px-6">
+        <section className="py-28 bg-gradient-to-b from-blue-100 to-white">
+            <div className="container mx-auto px-6 mb-10">
 
                 {/* Section Header */}
                 <div className="text-center mb-20">

@@ -7,10 +7,7 @@ export default function Hero() {
 
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-semibold mb-6 border border-blue-100">
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                    </span>
                     ✨ Trusted by 500+ companies
                 </div>
 
@@ -48,7 +45,7 @@ export default function Hero() {
                     </span>
                 </div>
 
-                {/* Dashboard Mockup */}
+                {/* Dashboard preveiw */}
                 <div className="flex justify-center">
                     <img
                         src="/dashboard.png"
@@ -56,12 +53,6 @@ export default function Hero() {
                         alt="dashboard preview"
                     />
                 </div>
-            </div>
-
-            {/* Background Decorations */}
-            <div className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] -translate-x-1/4 translate-y-1/5 rounded-full bg-blue-300 opacity-20 blur-[100px]"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] -translate-x-1/3 translate-y-1/4 rounded-full bg-sky-400 opacity-10 blur-[120px]"></div>
             </div>
         </section>
     );
