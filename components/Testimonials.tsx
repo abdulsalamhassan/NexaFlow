@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
 import { Star, Quote } from "lucide-react";
 
 // Swiper imports
@@ -47,9 +45,6 @@ const testimonials = [
         content: "I've tried Asana, Trello, and Jira. NexaFlow strikes the perfect balance between power and simplicity. The mobile app is also top-tier.",
     },
 ];
-
-const companies = ["Acme Corp", "Global Bank", "Nier.ai", "Stripey", "Boltshift"];
-
 export default function Testimonials() {
     return (
         <section className="py-24 bg-slate-50 overflow-hidden">
@@ -97,11 +92,11 @@ export default function Testimonials() {
                                 spaceBetween: 30,
                             },
                         }}
-                        className="pb-16 !px-4" // Padding bottom for pagination dots
+                        className="pb-16 !px-4"
                     >
                         {testimonials.map((item) => (
                             <SwiperSlide key={item.id} className="h-full">
-                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full flex flex-col hover:shadow-md transition-shadow duration-300">
+                                <article className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 h-full flex flex-col hover:shadow-md transition-shadow duration-300">
 
                                     {/* Stars */}
                                     <div className="flex gap-1 mb-6">
@@ -130,20 +125,19 @@ export default function Testimonials() {
                                             <div className="text-sm text-slate-500">{item.role}, {item.company}</div>
                                         </div>
                                     </div>
-                                </div>
+                                </article>
                             </SwiperSlide>
                         ))}
                     </Swiper>
 
-                    {/* Custom styling for Swiper pagination dots via Tailwind arbitrary values is hard, 
-              usually best to override via global CSS or style tag, but here is a inline fix */}
+                    {/* Swiper pagination overrides */}
                     <style jsx global>{`
             .swiper-pagination-bullet {
-              background: #cbd5e1; /* slate-300 */
+              background: #cbd5e1;
               opacity: 1;
             }
             .swiper-pagination-bullet-active {
-              background: #2563eb; /* blue-600 */
+              background: #2563eb;
               width: 20px;
               border-radius: 4px;
               transition: width 0.3s ease;

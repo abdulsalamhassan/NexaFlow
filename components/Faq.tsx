@@ -57,10 +57,15 @@ export default function FAQ() {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className="border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition cursor-pointer bg-white"
-                            onClick={() => toggleFAQ(index)}
+                            className="border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition bg-white"
                         >
-                            <div className="flex justify-between items-center">
+                            <button
+                                type="button"
+                                className="flex w-full items-center justify-between text-left"
+                                onClick={() => toggleFAQ(index)}
+                                aria-expanded={openIndex === index}
+                                aria-controls={`faq-panel-${index}`}
+                            >
                                 <h3 className="text-lg font-semibold text-slate-900">
                                     {faq.question}
                                 </h3>
@@ -68,10 +73,10 @@ export default function FAQ() {
                                     className={`w-6 h-6 text-slate-500 transition-transform ${openIndex === index ? "rotate-180" : ""
                                         }`}
                                 />
-                            </div>
+                            </button>
 
                             {openIndex === index && (
-                                <p className="mt-4 text-slate-600">{faq.answer}</p>
+                                <p id={`faq-panel-${index}`} className="mt-4 text-slate-600">{faq.answer}</p>
                             )}
                         </div>
                     ))}
