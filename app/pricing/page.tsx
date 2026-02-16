@@ -1,120 +1,76 @@
-import FAQ from "@/components/Faq";
+﻿import FAQ from "@/components/Faq";
 import { Check } from "lucide-react";
 
-export default function Pricing() {
-    return (
-        <section className="py-28 bg-gradient-to-b from-blue-100 to-white">
-            <div className="container mx-auto px-6 mb-10">
+export default function PricingPage() {
+  return (
+    <section className="bg-gradient-to-b from-blue-100 to-white py-28">
+      <div className="container mx-auto mb-10 px-6">
+        <div className="mb-20 text-center">
+          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">Simple, Transparent Pricing</h1>
+          <p className="mt-3 text-lg text-slate-600">Choose the plan that fits your team stage and growth.</p>
+        </div>
 
-                {/* Section Header */}
-                <div className="text-center mb-20">
-                    <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">
-                        Simple, Transparent Pricing
-                    </h2>
-                    <p className="text-slate-600 mt-3 text-lg">
-                        Choose the perfect plan for your needs.
-                    </p>
-                </div>
-
-                {/* Pricing Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-                    {/* Starter */}
-                    <div className="bg-white p-10 rounded-3xl border border-slate-200 shadow-lg hover:shadow-xl transition-all">
-                        <h3 className="text-xl font-semibold text-slate-900">Starter</h3>
-
-                        <div className="mt-5 flex items-baseline gap-1">
-                            <span className="text-5xl font-extrabold text-slate-900">$0</span>
-                            <span className="text-slate-600">/mo</span>
-                        </div>
-
-                        <p className="mt-4 text-slate-600">
-                            Ideal for individuals and hobby projects.
-                        </p>
-
-                        <button className="mt-8 w-full py-3 rounded-xl bg-slate-100 text-slate-900 font-semibold hover:bg-slate-200 transition shadow-sm">
-                            Get Started
-                        </button>
-
-                        <ul className="mt-8 space-y-4 text-slate-700">
-                            {["1 User", "5 Projects", "Community Support"].map((item) => (
-                                <li key={item} className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-green-500" /> {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* PRO (Featured) */}
-                    <div className="bg-gradient-to-br from-sky-700 to-blue-700 p-10 rounded-3xl shadow-2xl text-white transform scale-105 border border-indigo-600">
-
-                        <div className="absolute -mt-3 right-1 px-3 py-1 bg-blue-500 text-xs font-bold rounded-full">
-                            POPULAR
-                        </div>
-
-                        <h3 className="text-xl font-semibold">Pro</h3>
-
-                        <div className="mt-5 flex items-baseline gap-1">
-                            <span className="text-5xl font-extrabold">$29</span>
-                            <span className="text-blue-200">/mo</span>
-                        </div>
-
-                        <p className="mt-4 text-blue-200">
-                            Great for teams, startups, and growing businesses.
-                        </p>
-
-                        <button className="mt-8 w-full py-3 rounded-xl bg-white text-indigo-700 font-semibold hover:opacity-90 transition shadow-xl">
-                            Start Free Trial
-                        </button>
-
-                        <ul className="mt-8 space-y-4 text-blue-100">
-                            {[
-                                "Up to 10 Users",
-                                "Unlimited Projects",
-                                "Priority Support",
-                                "Analytics Dashboard",
-                            ].map((item) => (
-                                <li key={item} className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-blue-300" /> {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* ENTERPRISE */}
-                    <div className="bg-white p-10 rounded-3xl border border-slate-200 shadow-lg hover:shadow-xl transition-all">
-                        <h3 className="text-xl font-semibold text-slate-900">Enterprise</h3>
-
-                        <div className="mt-5 flex items-baseline gap-1">
-                            <span className="text-5xl font-extrabold text-slate-900">$99</span>
-                            <span className="text-slate-600">/mo</span>
-                        </div>
-
-                        <p className="mt-4 text-slate-600">
-                            Built for large organizations with advanced needs.
-                        </p>
-
-                        <button className="mt-8 w-full py-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-semibold hover:bg-slate-50 transition shadow-sm">
-                            Contact Sales
-                        </button>
-
-                        <ul className="mt-8 space-y-4 text-slate-700">
-                            {[
-                                "Unlimited Users",
-                                "Advanced Security & SSO",
-                                "Custom Integrations",
-                                "Dedicated Account Manager",
-                            ].map((item) => (
-                                <li key={item} className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-green-500" /> {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                </div>
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 md:grid-cols-3">
+          <article className="rounded-3xl border border-slate-200 bg-white p-10 shadow-lg transition-all hover:shadow-xl">
+            <h2 className="text-xl font-semibold text-slate-900">Starter</h2>
+            <div className="mt-5 flex items-baseline gap-1">
+              <span className="text-5xl font-extrabold text-slate-900">$0</span>
+              <span className="text-slate-600">/mo</span>
             </div>
-            <FAQ />
-        </section>
-    );
+            <p className="mt-4 text-slate-600">Ideal for individuals and early experimentation.</p>
+            <button className="mt-8 w-full rounded-xl bg-slate-100 py-3 font-semibold text-slate-900 shadow-sm hover:bg-slate-200">
+              Get Started
+            </button>
+            <ul className="mt-8 space-y-4 text-slate-700">
+              {["1 User", "5 Projects", "Community Support"].map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <Check className="h-5 w-5 text-green-500" /> {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="relative scale-105 rounded-3xl border border-indigo-600 bg-gradient-to-br from-sky-700 to-blue-700 p-10 text-white shadow-2xl">
+            <div className="absolute -right-2 -top-3 rounded-full bg-blue-500 px-3 py-1 text-xs font-bold">POPULAR</div>
+            <h2 className="text-xl font-semibold">Pro</h2>
+            <div className="mt-5 flex items-baseline gap-1">
+              <span className="text-5xl font-extrabold">$29</span>
+              <span className="text-blue-200">/mo</span>
+            </div>
+            <p className="mt-4 text-blue-100">Great for fast-moving teams and startups.</p>
+            <button className="mt-8 w-full rounded-xl bg-white py-3 font-semibold text-indigo-700 shadow-xl hover:opacity-90">
+              Start Free Trial
+            </button>
+            <ul className="mt-8 space-y-4 text-blue-100">
+              {["Up to 10 Users", "Unlimited Projects", "Priority Support", "Analytics Dashboard"].map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <Check className="h-5 w-5 text-blue-300" /> {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="rounded-3xl border border-slate-200 bg-white p-10 shadow-lg transition-all hover:shadow-xl">
+            <h2 className="text-xl font-semibold text-slate-900">Enterprise</h2>
+            <div className="mt-5 flex items-baseline gap-1">
+              <span className="text-5xl font-extrabold text-slate-900">$99</span>
+              <span className="text-slate-600">/mo</span>
+            </div>
+            <p className="mt-4 text-slate-600">Built for larger organizations with advanced requirements.</p>
+            <button className="mt-8 w-full rounded-xl border border-slate-300 bg-white py-3 font-semibold text-slate-900 shadow-sm hover:bg-slate-50">
+              Contact Sales
+            </button>
+            <ul className="mt-8 space-y-4 text-slate-700">
+              {["Unlimited Users", "Advanced Security & SSO", "Custom Integrations", "Dedicated Account Manager"].map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <Check className="h-5 w-5 text-green-500" /> {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </div>
+      <FAQ />
+    </section>
+  );
 }
