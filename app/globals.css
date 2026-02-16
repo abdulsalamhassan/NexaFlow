@@ -1,2 +1,32 @@
 @import "tailwindcss";
 
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --brand: #2563eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top, #eff6ff 0%, var(--background) 38%);
+  color: var(--foreground);
+}
+
+*::selection {
+  background: #bfdbfe;
+  color: #0f172a;
+}
+
+a,
+button {
+  transition: all 180ms ease;
+}
+
+section {
+  scroll-margin-top: 88px;
+}

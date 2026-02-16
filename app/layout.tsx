@@ -7,8 +7,12 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NexaFlow Platform",
-  description: "Modern Multi-Page SaaS Interface",
+  title: {
+    default: "NexaFlow | Workflow Platform",
+    template: "%s | NexaFlow",
+  },
+  description:
+    "NexaFlow helps teams plan, collaborate, and ship faster with a modern workflow platform.",
 };
 
 export default function RootLayout({
